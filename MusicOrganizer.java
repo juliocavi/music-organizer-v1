@@ -35,26 +35,28 @@ public class MusicOrganizer
     {
         return files.size();
     }
-
+    
     /**
+     * Utilizo mi metodo validIndex.
      * List a file from the collection.
      * @param index The index of the file to be listed.
      */
     public void listFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        if(validIndex(index) == true) {
             String filename = files.get(index);
             System.out.println(filename);
         }
     }
 
     /**
+     * Utilizo mi metodo validIndex.
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
      */
     public void removeFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        if(validIndex(index) == true) {
             files.remove(index);
         }
     }
@@ -69,7 +71,7 @@ public class MusicOrganizer
             System.out.println("El rango valido esta entre 0 y " + (files.size()-1) + " incluidos");
         }
     }
-    
+
     /**
      * Checkeo de indices validos.
      * Devuelve true si el indice es valido y false si no lo es.
@@ -84,3 +86,4 @@ public class MusicOrganizer
         return indiceValido;
     }
 }
+
