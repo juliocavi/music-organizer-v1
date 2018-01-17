@@ -69,4 +69,18 @@ public class MusicOrganizer
             System.out.println("El rango valido esta entre 0 y " + (files.size()-1) + " incluidos");
         }
     }
+    
+    /**
+     * Checkeo de indices validos.
+     * Devuelve true si el indice es valido y false si no lo es.
+     * @param index The index of the file to be checked.
+     */
+    public boolean validIndex(int index)
+    {
+        boolean indiceValido = false;
+        if(index >= 0 && index < files.size()) {
+            indiceValido = true;
+        }
+        return indiceValido;
+    }
 }
